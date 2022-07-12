@@ -20,7 +20,7 @@ export default {
   methods: {
     async getMovies () {
       const data = axios.get(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=27efcbf585679163e595d4a239928ab5&language=en-US&page=1`
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.API_KEY_V3}&language=en-US&page=1`
       )
 
       const result = await data
@@ -30,6 +30,6 @@ export default {
       })
     }
   }
-  
+
 }
 </script>
